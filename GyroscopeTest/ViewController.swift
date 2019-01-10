@@ -11,6 +11,7 @@ import CoreMotion   //library for ~motion~
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var centerLabel: UILabel!
     
     var motionMang = CMMotionManager()  //manage all of gyro's info
     
@@ -26,6 +27,10 @@ class ViewController: UIViewController {
             if let myData = data
             {
                 print(myData.rotationRate)
+                if myData.rotationRate.x > 3 || myData.rotationRate.x < -3
+                {
+                    print("YOU TILTED YOUR SCREEN")
+                }
             }
         }
     }
