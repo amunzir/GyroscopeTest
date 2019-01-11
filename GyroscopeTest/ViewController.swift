@@ -27,9 +27,15 @@ class ViewController: UIViewController {
             if let myData = data
             {
                 print(myData.rotationRate)
-                if myData.rotationRate.x > 3 || myData.rotationRate.x < -3
+                if myData.rotationRate.x > 3 //|| myData.rotationRate.x < -3
                 {
                     print("YOU TILTED YOUR SCREEN")
+                    self.centerLabel.text = "Face"
+                }
+                else if myData.rotationRate.x < -3
+                {
+                    print("T I L T E D  U P")
+                    self.centerLabel.text = "Ceiling"
                 }
             }
         }
