@@ -11,7 +11,9 @@ import CoreMotion   //library for ~motion~
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var centerLabel: UILabel!
+    @IBOutlet weak var xLabel: UILabel!
+    @IBOutlet weak var yLabel: UILabel!
+    @IBOutlet weak var zLabel: UILabel!
     
     var motionMang = CMMotionManager()  //manage all of gyro's info
     
@@ -30,12 +32,34 @@ class ViewController: UIViewController {
                 if myData.rotationRate.x > 3 //|| myData.rotationRate.x < -3
                 {
                     print("YOU TILTED YOUR SCREEN")
-                    self.centerLabel.text = "Face"
+                    self.xLabel.text = "Face"
                 }
                 else if myData.rotationRate.x < -3
                 {
                     print("T I L T E D  U P")
-                    self.centerLabel.text = "Ceiling"
+                    self.xLabel.text = "Ceiling"
+                }
+                
+                if myData.rotationRate.y > 3
+                {
+                    print("YOU TILTED YOUR SCREEN")
+                    self.yLabel.text = "Right"
+                }
+                else if myData.rotationRate.y < -3
+                {
+                    print("T I L T E D  U P")
+                    self.yLabel.text = "Left"
+                }
+                
+                if myData.rotationRate.z > 3
+                {
+                    print("YOU TILTED YOUR SCREEN")
+                    self.zLabel.text = "Counter Clockwise"
+                }
+                else if myData.rotationRate.z < -3
+                {
+                    print("T I L T E D  U P")
+                    self.zLabel.text = "Clockwise"
                 }
             }
         }
