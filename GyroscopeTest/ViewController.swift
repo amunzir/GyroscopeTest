@@ -32,34 +32,34 @@ class ViewController: UIViewController {
                 if myData.rotationRate.x > 2 //|| myData.rotationRate.x < -3
                 {
                     //print("YOU TILTED YOUR SCREEN")
-                    self.xLabel.text = "Forward"
+                    self.xLabel.text = "X-Axis: Forward"
                 }
                 else if myData.rotationRate.x < -2
                 {
                     //print("T I L T E D  U P")
-                    self.xLabel.text = "Backward"
+                    self.xLabel.text = "X-Axis: Backward"
                 }
                 
                 if myData.rotationRate.y > 2
                 {
                     //print("YOU TILTED YOUR SCREEN")
-                    self.yLabel.text = "Right"
+                    self.yLabel.text = "Y-Axis: Right"
                 }
                 else if myData.rotationRate.y < -2
                 {
                     //print("T I L T E D  U P")
-                    self.yLabel.text = "Left"
+                    self.yLabel.text = "Y-Axis: Left"
                 }
                 
                 if myData.rotationRate.z > 2
                 {
                     //print("YOU TILTED YOUR SCREEN")
-                    self.zLabel.text = "Counter Clockwise"
+                    self.zLabel.text = "Z-Axis: Counter Clockwise"
                 }
                 else if myData.rotationRate.z < -2
                 {
                     //print("T I L T E D  U P")
-                    self.zLabel.text = "Clockwise"
+                    self.zLabel.text = "Z-Axis: Clockwise"
                 }
             }
         }
