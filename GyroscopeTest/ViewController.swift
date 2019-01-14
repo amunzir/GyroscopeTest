@@ -29,36 +29,36 @@ class ViewController: UIViewController {
             if let myData = data
             {
                 print(myData.rotationRate)
-                if myData.rotationRate.x > 3 //|| myData.rotationRate.x < -3
+                if myData.rotationRate.x > 2 //|| myData.rotationRate.x < -3
                 {
-                    print("YOU TILTED YOUR SCREEN")
-                    self.xLabel.text = "Face"
+                    //print("YOU TILTED YOUR SCREEN")
+                    self.xLabel.text = "Forward"
                 }
-                else if myData.rotationRate.x < -3
+                else if myData.rotationRate.x < -2
                 {
-                    print("T I L T E D  U P")
-                    self.xLabel.text = "Ceiling"
+                    //print("T I L T E D  U P")
+                    self.xLabel.text = "Backward"
                 }
                 
-                if myData.rotationRate.y > 3
+                if myData.rotationRate.y > 2
                 {
-                    print("YOU TILTED YOUR SCREEN")
+                    //print("YOU TILTED YOUR SCREEN")
                     self.yLabel.text = "Right"
                 }
-                else if myData.rotationRate.y < -3
+                else if myData.rotationRate.y < -2
                 {
-                    print("T I L T E D  U P")
+                    //print("T I L T E D  U P")
                     self.yLabel.text = "Left"
                 }
                 
-                if myData.rotationRate.z > 3
+                if myData.rotationRate.z > 2
                 {
-                    print("YOU TILTED YOUR SCREEN")
+                    //print("YOU TILTED YOUR SCREEN")
                     self.zLabel.text = "Counter Clockwise"
                 }
-                else if myData.rotationRate.z < -3
+                else if myData.rotationRate.z < -2
                 {
-                    print("T I L T E D  U P")
+                    //print("T I L T E D  U P")
                     self.zLabel.text = "Clockwise"
                 }
             }
